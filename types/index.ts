@@ -22,6 +22,7 @@ export type ProfileType = {
   fullName: string,
   headline: string,
   profileImage: {
+    lqip: string | undefined;
     alt: string,
     image: string
   },
@@ -87,12 +88,4 @@ export type PostType = {
   body: PortableTextBlock[];
   featured: boolean;
   isPublished: boolean;
-};
-
-export type HeroeType = {
-  _id: string;
-  _createdAt: string;
-  name: string;
-  url: string;
-  met: boolean;
 };

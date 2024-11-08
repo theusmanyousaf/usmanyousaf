@@ -18,14 +18,17 @@ const profile = {
       title: "Headline",
       type: "string",
       description: "In one short sentence, what do you do?",
-      validation: (Rule) => Rule.required().min(40).max(60),
+      validation: (Rule) => Rule.required().min(40).max(80),
     }),
-    {
+    defineField({
       name: "profileImage",
       title: "Profile Image",
       type: "image",
       description: "Upload a profile picture",
-      options: { hotspot: true },
+      options: {
+        hotspot: true,
+        metadata: ["lqip"], // "blurhash", "palette", etc
+      },
       fields: [
         {
           name: "alt",
@@ -33,78 +36,47 @@ const profile = {
           type: "string",
         },
       ],
-    },
-    {
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "shortBio",
       title: "Short Bio",
       type: "text",
       rows: 4,
-    },
-    {
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "email",
       title: "Email Address",
       type: "string",
-    },
-    {
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "location",
       title: "Location",
       type: "string",
-    },
-    {
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "fullBio",
       title: "Full Bio",
       type: "array",
       of: [{ type: "block" }],
-    },
-    {
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "resumeURL",
       title: "Upload Resume",
       type: "file",
-    },
-    {
-      name: "socialLinks",
-      title: "Social Links",
-      type: "object",
-      description: "Add your social media links:",
-      fields: [
-        {
-          name: "github",
-          title: "Github URL",
-          type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
-          name: "linkedin",
-          title: "Linkedin URL",
-          type: "url",
-          initialValue: "https://linkedin.com/in/",
-        },
-        {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
-          name: "twitch",
-          title: "Twitch URL",
-          type: "url",
-          initialValue: "https://twitch.com/",
-        },
-      ],
-      options: {
-        collapsed: false,
-        collapsible: true,
-        columns: 2,
-      },
-    },
-    {
-      name: "skills",
-      title: "Skills",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "usage",
+      title: "Usage",
       type: "array",
-      description: "Add a list of skills",
-      of: [{ type: "string" }],
-    },
+      of: [{ type: "block" }],
+      validation: (rule) => rule.required(),
+    }),
   ],
 };
 
