@@ -40,6 +40,13 @@ const project = {
             type: "url",
         },
         {
+            name: "repository",
+            title: "Repository URL",
+            type: "url",
+            description:
+                'Leaving this URL blank will add a "No Repository" message to the link.',
+        },
+        {
             name: "coverImage",
             title: "Cover Image",
             type: "image",
