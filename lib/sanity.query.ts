@@ -46,7 +46,7 @@ export const jobQuery = groq`*[_type == "job"] | order(_createdAt desc){
 }`;
 
 export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc){
-  _id, 
+  _id,
   name,
   "slug": slug.current,
   tagline,
@@ -71,8 +71,8 @@ export const postsQuery = groq`*[_type == "Post"] | order(_createdAt desc){
   ${postField},
   date,
   "author": author-> {
-    name, 
-    photo, 
+    name,
+    photo,
     twitterUrl
   },
   body,
@@ -89,14 +89,14 @@ export const singlePostQuery = groq`*[_type == "Post" && slug.current == $slug][
   date,
   tags,
   "author": author-> {
-    name, 
+    name,
     photo {
       "image": asset->url,
       alt
-    }, 
+    },
     twitterUrl
   },
   body,
 }`;
 
-export const heroesQuery = groq`*[_type == "heroe"] | order(_createdAt asc) { _id, _createdAt, name, url, met }`;
+// export const heroesQuery = groq`*[_type == "heroe"] | order(_createdAt asc) { _id, _createdAt, name, url, met }`;

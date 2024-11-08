@@ -18,21 +18,21 @@ export interface QuizValueProps {
 }
 
 export type ProfileType = {
-  _id: string,
-  fullName: string,
-  headline: string,
+  _id: string;
+  fullName: string;
+  headline: string;
   profileImage: {
-    lqip: string | undefined;
-    alt: string,
-    image: string
-  },
-  shortBio: string,
-  email: string,
-  fullBio: PortableTextBlock[],
-  location: string,
-  resumeURL: string,
-  socialLinks: string[],
-  skills: string[],
+    image: string;
+    lqip: string;
+    alt: string;
+  };
+  shortBio: string;
+  email: string;
+  fullBio: PortableTextBlock[];
+  location: string;
+  resumeURL: string;
+  og: string;
+  usage: PortableTextBlock[];
 };
 
 export type JobType = {
@@ -88,4 +88,12 @@ export type PostType = {
   body: PortableTextBlock[];
   featured: boolean;
   isPublished: boolean;
+};
+
+export type HeroeType = {
+  _id: string;
+  _createdAt: string;
+  name: string;
+  url: string;
+  met: boolean;
 };
