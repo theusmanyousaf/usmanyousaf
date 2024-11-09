@@ -49,14 +49,14 @@ export default function Footer() {
                   href="https://vercel.com"
                   rel="noreferrer noopener"
                   target="_blank"
-                  className="flex items-center gap-x-2 dark:text-white text-zinc-600 hover:underline"
+                  className="flex items-center gap-x-1 dark:text-white text-zinc-600 hover:underline"
                 >
                   <Image
                     src={vercellogo}
                     width={20}
                     height={20}
                     alt="vercel logo"
-                  />{" "}
+                  />
                   Vercel
                 </a>
               </li>
