@@ -16,7 +16,7 @@ type Props = {
 };
 
 const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png";
+  "https://res.cloudinary.com/usmanyousaf/image/upload/v1731220756/projects_ezi7d6.png";
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
+    metadataBase: new URL(`https://usmanyousaf.vercel.app/projects/${project.slug}`),
     description: project.tagline,
     openGraph: {
       images: project.coverImage
         ? urlFor(project.coverImage.image).width(1200).height(630).url()
         : fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
+      url: `https://usmanyousaf.vercel.app/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
     },
@@ -64,11 +64,10 @@ export default async function Project({ params }: Props) {
                 href={project.projectUrl}
                 rel="noreferrer noopener"
                 target="_blank"
-                className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${
-                  !project.projectUrl
-                    ? "cursor-not-allowed opacity-80"
-                    : "cursor-pointer hover:dark:border-zinc-700 hover:border-zinc-200"
-                }`}
+                className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${!project.projectUrl
+                  ? "cursor-not-allowed opacity-80"
+                  : "cursor-pointer hover:dark:border-zinc-700 hover:border-zinc-200"
+                  }`}
               >
                 <BiLinkExternal aria-hidden="true" />
                 {project.projectUrl ? "Live URL" : "Coming Soon"}
@@ -78,11 +77,10 @@ export default async function Project({ params }: Props) {
                 href={project.repository}
                 rel="noreferrer noopener"
                 target="_blank"
-                className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${
-                  !project.repository
-                    ? "cursor-not-allowed opacity-80"
-                    : "cursor-pointer hover:dark:border-zinc-700 hover:border-zinc-200"
-                }`}
+                className={`flex items-center gap-x-2 dark:bg-primary-bg bg-secondary-bg dark:text-white text-zinc-700 border border-transparent rounded-md px-4 py-2 duration-200 ${!project.repository
+                  ? "cursor-not-allowed opacity-80"
+                  : "cursor-pointer hover:dark:border-zinc-700 hover:border-zinc-200"
+                  }`}
               >
                 <BiLogoGithub aria-hidden="true" />
                 {project.repository ? "GitHub" : "No Repo"}

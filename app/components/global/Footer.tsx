@@ -3,15 +3,16 @@ import sanitylogo from "@/public/sanity.png";
 import vercellogo from "@/public/vercel.svg";
 import nextjslogo from "@/public/nextjs.svg";
 import UnmountStudio from "./Unmount";
+import { BiLogoGithub } from "react-icons/bi";
 
 export default function Footer() {
   return (
     <UnmountStudio>
       <footer className="border-t dark:border-zinc-800 border-zinc-100 mt-44 lg:min-h-[250px] min-h-full relative">
-        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16">
-          <div className="flex md:flex-row flex-col items-center gap-x-2">
+        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:items-baseline items-center lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16">
+          <div className="flex md:flex-row flex-col lg:items-baseline items-center gap-x-2">
             <h3 className="font-inter">Built with:</h3>
-            <ul className="flex items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
+            <ul className="flex lg:items-baseline items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
               <li>
                 <a
                   href="https://sanity.io"
@@ -64,20 +65,20 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col lg:items-end items-center lg:text-start text-center">
-            {/* <a
-              className="flex items-center justify-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 px-4 text-center mb-3    font-bold tracking-tight"
+            <small className="text-zinc-500 mb-3">
+              Copyright &copy; Usman Yousaf {new Date().getFullYear()} All rights
+              Reserved
+            </small>
+
+            <a
+              className="flex items-center justify-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 px-4 text-center font-bold tracking-tight"
               href="https://github.com/Evavic44/victoreke.com"
               target="_blank"
               rel="noreferrer noopener"
             >
+              Inspiration from
               <BiLogoGithub />
-              Stars <em className="text-primary-color not-italic">3,329</em>
-            </a> */}
-
-            <small className="text-zinc-500">
-              Copyright &copy; Victor Eke {new Date().getFullYear()} All rights
-              Reserved
-            </small>
+            </a>
           </div>
         </div>
       </footer>

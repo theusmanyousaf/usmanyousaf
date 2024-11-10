@@ -32,7 +32,7 @@ module.exports = {
       },
       backgroundImage: {
         noise:
-          "url('https://res.cloudinary.com/victoreke/image/upload/v1691779257/victoreke/noise.png')",
+          "url('https://res.cloudinary.com/usmanyousaf/image/upload/v1731227662/noise_h6a59k.png')",
       },
       backgroundPosition: {
         zero: "0 0",

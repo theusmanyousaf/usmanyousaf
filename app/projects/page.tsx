@@ -10,14 +10,14 @@ import PageHeading from "../components/shared/PageHeading";
 
 export const metadata: Metadata = {
   title: "Project | Usman Yousaf",
-  metadataBase: new URL("https://victoreke.com/projects"),
+  metadataBase: new URL("https://usmanyousaf.vercel.app/projects"),
   description: "Explore projects built by Usman Yousaf",
   openGraph: {
     title: "Projects | Usman Yousaf",
-    url: "https://victoreke.com/projects",
+    url: "https://usmanyousaf.vercel.app/projects",
     description: "Explore projects built by Usman Yousaf",
     images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
+      "https://res.cloudinary.com/usmanyousaf/image/upload/v1731220756/projects_ezi7d6.png",
   },
 };
 

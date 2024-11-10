@@ -8,7 +8,7 @@ import { projectId, dataset } from "./lib/env.api";
 
 export default defineConfig({
   name: "usmanyousaf",
-  title: "usmanyousaf.com",
+  title: "usmanyousaf.vercel.app",
   basePath: "/studio",
   projectId,
   dataset,
